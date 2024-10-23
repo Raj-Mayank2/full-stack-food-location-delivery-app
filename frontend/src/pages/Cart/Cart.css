@@ -23,3 +23,7 @@
     background-color:#e2e2e2;
     border: none ;
 }
+
+.cart-items-item .cross{
+    cursor: pointer;
+}
