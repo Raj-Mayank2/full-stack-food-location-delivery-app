@@ -28,7 +28,7 @@ const Cart = () => {
                   <p>{item.price}</p>
                   <p>{cartItems[item._id]}</p>
                   <p>{item.price * cartItems[item._id]}</p>
-                  <p onClick={()=>removeFromCart(item._id)}className='cross'>x</p>
+                  <p onClick={() => removeFromCart(item._id)} className='cross'>x</p>
                 </div>
                 <hr />
               </div>
@@ -36,6 +36,35 @@ const Cart = () => {
             )
           }
         })}
+      </div>
+      <div className="cart-bottom">
+        <div className="cart-total">
+          <h2>Cart Totals</h2>
+          <div>
+            <div className="cart-total-details">
+              <p>SubTotal</p>
+              <p>{0}</p>
+            </div>
+            <hr />
+            <div className="cart-total-details">
+              <p>Delivery Fee</p>
+              <p>{2}</p>
+            </div>
+            <hr />
+            <div className="cart-total-details">
+              <b>Total</b>
+              <b>{0}</b>
+            </div>
+          </div>
+          <button>Proceed to Checkout</button>
+        </div>
+        <div className="cart-promocode">
+          <p>If you have a promo code enter it here</p>
+          <div className="cart-promocode-input">
+            <input type="text" placeholder='promo code' />
+            <button>Submit</button>
+          </div>
+        </div>
       </div>
     </div>
   )
